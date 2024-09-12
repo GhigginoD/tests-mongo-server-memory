@@ -36,7 +36,7 @@ describe('UserService', () => {
         const user = { email: 'foo@bar.com', name: 'test' };
         await userService.create(user);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         expect(error.status).toBe(403);
         expect(error.message).toBe('User already exists');
       }
@@ -46,7 +46,7 @@ describe('UserService', () => {
         const user = { email: 'foo@bar.com', name: 'test', status: true };
         await userService.create(user);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         expect(error.status).toBe(403);
         expect(error.message).toBe('Invalid arguments to create a Users');
       }

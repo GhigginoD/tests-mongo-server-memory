@@ -16,7 +16,7 @@ export class UserService {
         data: { ...createUserDto },
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         if (error instanceof PrismaClientKnownRequestError) {
           if (error.code === 'P2002') {
             throw new ForbiddenException('User already exists');
